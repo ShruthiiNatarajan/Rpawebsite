@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page</title>
+    <script>
+        function login() {
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+
+            // You should add proper authentication logic here.
+            // For simplicity, we will just check for a hardcoded username and password.
+            if (username === "Mulesoft" && password === "Mulesoft") {
+                // If the login is successful, redirect to the links page.
+                window.location.href = "links.html";
+            } else {
+                alert("Invalid username or password. Please try again.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Login Page</h1>
+    <form>
+        <label for="username">Username:</label>
+        <input type="text" id="username" required><br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" required><br><br>
+
+        <input type="button" value="Login" onclick="login()">
+    </form>
+</body>
+</html>
